@@ -1,57 +1,36 @@
-k
 package ecommerce_system;
-import javax.swing.*;
-import java .awt.*;
-import java .awt.Graphics ;
-public class gui3  extends JPanel{
-   @Override
-   protected void paintComponent(Graphics g){
-   super.paintComponent(g);
-   g.setColor(Color.magenta.darker());
-    g.fill3DRect(70, 30, 550, 250, true);
+public class Customer {
+    private int customer_id;
+     String name;
+     String address;
+     
+    public int getCustomer_id() {
+        return customer_id;
+    }
     
-    g.setColor(Color. magenta.darker());
-    g.fill3DRect(670, 30, 550, 250, true);
-    
-    g.setColor(Color.CYAN.magenta.darker());
-    g.fill3DRect(70, 350, 550, 250, true);
-    
-    g.setColor(Color.magenta.darker());
-    g.fill3DRect(670, 350, 550, 250, true);
-    
-    
-     g.setColor(Color.black.brighter());
-    g.fillOval(470, 170, 100, 100);
-    
-    g.setColor(Color.black.brighter());
-    g.fillOval(1070,170 , 100, 100);
-    
-    g.setColor(Color.black.brighter());
-    g.fillOval(470, 490, 100, 100);
-    
-    g.setColor(Color.black.brighter());
-    g.fillOval(1070, 490, 100, 100);
-    
-    g.setColor(Color.GREEN);
-    g.fillOval(617, 305,15,15);
-    g.setColor(Color.GREEN);
-    g.fillOval(635, 294,15,15);
-    g.setColor(Color.GREEN);
-    g.fillOval(653, 305,15,15);
-    
-    g.setColor(Color.GREEN);
-    g.fillOval(623, 328,15,15);
-    g.setColor(Color.GREEN);
-    g.fillOval(647, 328,15,15);
-    
-    
-    g.setColor(Color.GREEN.darker());
-    g.fillOval(625, 307,35,27);
-     g.setColor(Color.black.darker());
-    g.fillOval(633, 312,19,17);
-    
-   
-   }
+    public void setCustomer_id(int customer_id) {
+        this.customer_id = Math.abs(customer_id);
+    }
 
-   
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    } public Customer(){}
+    public Customer(int customer_id,String name,String address){
+    setCustomer_id(customer_id);
+    this.name=name;
+    this.address=address;
+    
+    }
+    
 }
