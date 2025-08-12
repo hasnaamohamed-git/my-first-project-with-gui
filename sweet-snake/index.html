@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sweet Snake</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <h1 class="logo">Sweet Snake</h1>
+        <div class="controls">
+          <label class="label" for="level">Level</label>
+          <select id="level" class="select">
+            <option value="easy">Easy</option>
+            <option value="medium" selected>Medium</option>
+            <option value="hard">Hard</option>
+            <option value="expert">Expert</option>
+          </select>
+          <button id="startBtn" class="btn primary">Start</button>
+          <button id="pauseBtn" class="btn">Pause</button>
+          <button id="resetBtn" class="btn">Reset</button>
+        </div>
+      </header>
+
+      <main class="main">
+        <aside class="sidebar card">
+          <div class="stat">
+            <span class="stat-label">Score</span>
+            <span id="score" class="stat-value">0</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Best</span>
+            <span id="best" class="stat-value">0</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Speed</span>
+            <span id="speed" class="stat-value">0</span>
+          </div>
+          <div class="legend">
+            <div class="legend-item"><span class="dot apple"></span> Apple</div>
+            <div class="legend-item"><span class="dot candy"></span> Candy</div>
+            <div class="legend-item"><span class="dot bomb"></span> Bomb</div>
+            <div class="legend-item"><span class="dot wall"></span> Wall</div>
+          </div>
+          <div class="help">
+            <p>Use arrow keys or WASD to move. Press Space to pause.</p>
+          </div>
+        </aside>
+
+        <section class="board-wrap card">
+          <canvas id="board" width="480" height="480" aria-label="Game board" role="img"></canvas>
+          <div id="overlay" class="overlay hidden">
+            <div class="modal">
+              <h2 id="overlayTitle">Sweet Snake</h2>
+              <p id="overlayMsg">Press Start to begin!</p>
+              <button id="overlayBtn" class="btn primary">Start</button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>Made with ♡</span>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
